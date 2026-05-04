@@ -1,0 +1,14 @@
+<h2>Lista de Tarefas</h2>
+
+<ul>
+<li *ngFor="let tarefa of tarefas">
+  <strong>{{ tarefa.titulo }}</strong> - {{ tarefa.status }}
+  <br>
+  <small>Criado em: {{ tarefa.dataCriacao | date:'dd/MM/yyyy HH:mm' }}</small>
+
+  <br>
+
+  <button class="btn-concluir" (click)="concluir(tarefa.id)">Concluir</button>
+  <button class="btn-excluir" (click)="excluir(tarefa.id)">Excluir</button>
+</li>
+</ul>
